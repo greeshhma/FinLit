@@ -1,0 +1,49 @@
+:root[data-theme="light"] {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --dark-bg: #ffffff;
+    --darker-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #111827;
+    --text-muted: #6b7280;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  :root[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+    --dark-bg: #111827;
+    --darker-bg: #030712;
+    --card-bg: #1f2937;
+    --text-color: #e5e7eb;
+    --text-muted: #9ca3af;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+  
+  .theme-toggle:hover {
+    transform: rotate(15deg);
+  }
+  
+  /* Add these transitions to your existing elements */
+  body,
+  .auth-card,
+  .dashboard-card,
+  .nav-link,
+  button,
+  input {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
